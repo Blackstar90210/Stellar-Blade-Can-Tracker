@@ -1,0 +1,307 @@
+{
+  "totalCans": 49,
+  "cansByRegion": {
+    "Eidos 7": 3,
+    "Xion": 8,
+    "Wasteland": 15,
+    "Matrix 11": 3,
+    "Great Desert": 16,
+    "Spire 4": 4
+  },
+  "cans": [
+    {
+      "id": 1,
+      "name": "Cryo Original",
+      "region": "Eidos 7",
+      "location": "Distributore automatico nel centro commerciale allagato dopo aver svuotato l'acqua (missione Oblivion)"
+    },
+    {
+      "id": 25,
+      "name": "Elixir Carrot",
+      "region": "Eidos 7",
+      "location": "Ristorante abbandonato nel distretto commerciale allagato (missione Oblivion richiesta)"
+    },
+    {
+      "id": 33,
+      "name": "Potential Blast",
+      "region": "Eidos 7",
+      "location": "Terzo piano di un edificio rotto nell'area di costruzione"
+    },
+    {
+      "id": 3,
+      "name": "Pixie",
+      "region": "Xion",
+      "location": "A terra nella parte più a nord di Xion"
+    },
+    {
+      "id": 9,
+      "name": "The Machinetta Americano",
+      "region": "Xion",
+      "location": "Distributore automatico a nord-est del Salone di Gwen"
+    },
+    {
+      "id": 11,
+      "name": "The Machinetta Caramel Macchiato",
+      "region": "Xion",
+      "location": "Distributore automatico a est della statua gigante della città"
+    },
+    {
+      "id": 19,
+      "name": "GrainT Oolong",
+      "region": "Xion",
+      "location": "Scala la corda sul lato ovest della piattaforma e salta oltre il tesoro"
+    },
+    {
+      "id": 27,
+      "name": "Behemoth Red",
+      "region": "Xion",
+      "location": "Distributore in un vicolo verso il bar The Last Gulp di Su e Enya"
+    },
+    {
+      "id": 36,
+      "name": "Dionysus C",
+      "region": "Xion",
+      "location": "Vicino ai bidoni della spazzatura salendo le scale del negozio di Roxanne"
+    },
+    {
+      "id": 39,
+      "name": "Mountain Sparkle Mont Blanc",
+      "region": "Xion",
+      "location": "Distributore automatico sopra Sister's Junk"
+    },
+    {
+      "id": 45,
+      "name": "Bayern Weissbier Dunkel",
+      "region": "Xion",
+      "location": "Alla fine di un vicolo tra i negozi di Roxanne e Lyle"
+    },
+    {
+      "id": 2,
+      "name": "Cryo Zero",
+      "region": "Wasteland",
+      "location": "Apri il forziere e spara al drone tre volte mentre fugge a sud"
+    },
+    {
+      "id": 4,
+      "name": "Pixie Zero",
+      "region": "Wasteland",
+      "location": "Spara alle travi che intrappolano il robot di manutenzione giallo"
+    },
+    {
+      "id": 10,
+      "name": "The Machinetta Cafe Latte",
+      "region": "Wasteland",
+      "location": "Risolvi il puzzle della piastra a pressione"
+    },
+    {
+      "id": 12,
+      "name": "Cryo Cafe Original",
+      "region": "Wasteland",
+      "location": "Attraversa la nave e gira a sinistra"
+    },
+    {
+      "id": 17,
+      "name": "The Haven Green Tea",
+      "region": "Wasteland",
+      "location": "Salti di sporgenze e oscillazioni di barre (doppio salto richiesto)"
+    },
+    {
+      "id": 18,
+      "name": "GrainT Barley",
+      "region": "Wasteland",
+      "location": "Scala la sporgenza e procedi a ovest, risolvi il puzzle della piastra"
+    },
+    {
+      "id": 20,
+      "name": "GrainT Corn",
+      "region": "Wasteland",
+      "location": "Distributore automatico a sud del campo Central Scrap Plains"
+    },
+    {
+      "id": 21,
+      "name": "Nectar Orange",
+      "region": "Wasteland",
+      "location": "Sposta il carrello arancione verso il cartellone (doppio salto richiesto)"
+    },
+    {
+      "id": 26,
+      "name": "Elixir Green",
+      "region": "Wasteland",
+      "location": "Salta dalla rampa alle piattaforme metalliche (doppio salto richiesto)"
+    },
+    {
+      "id": 28,
+      "name": "Behemoth Green",
+      "region": "Wasteland",
+      "location": "Sposta le due sfere metalliche sui pulsanti"
+    },
+    {
+      "id": 34,
+      "name": "Potential Tempest",
+      "region": "Wasteland",
+      "location": "Attiva le quattro console nell'area"
+    },
+    {
+      "id": 41,
+      "name": "Mountain Sparkle Halla",
+      "region": "Wasteland",
+      "location": "Scala le sporgenze gialle e completa i salti oscillanti (doppio salto richiesto)"
+    },
+    {
+      "id": 42,
+      "name": "Cryo the Clear",
+      "region": "Wasteland",
+      "location": "Dietro un cancello nell'Area Proibita, vai sottoterra"
+    },
+    {
+      "id": 44,
+      "name": "Bayern Hefe Weissbier",
+      "region": "Wasteland",
+      "location": "Distributore automatico accanto alle rovine di un edificio"
+    },
+    {
+      "id": 46,
+      "name": "Corsair Lager",
+      "region": "Wasteland",
+      "location": "Attiva l'interruttore e raggiungi la piattaforma in tempo"
+    },
+    {
+      "id": 5,
+      "name": "Newfoundland Dry",
+      "region": "Matrix 11",
+      "location": "Stanza del boss Juggernaut, scala i container blu e scendi dalla piattaforma metallica"
+    },
+    {
+      "id": 13,
+      "name": "Cryo Café Vanilla",
+      "region": "Matrix 11",
+      "location": "Nascosta accanto ai container nel Train Yard area"
+    },
+    {
+      "id": 47,
+      "name": "Corsair Ale",
+      "region": "Matrix 11",
+      "location": "Gira a destra raggiungendo Train Graveyard, alla fine del tunnel allagato"
+    },
+    {
+      "id": 6,
+      "name": "Newfoundland Dry Zero",
+      "region": "Great Desert",
+      "location": "Spara alla cassa di legno che sporge dal terreno"
+    },
+    {
+      "id": 8,
+      "name": "Milky Pop Zero",
+      "region": "Great Desert",
+      "location": "Scala le sporgenze gialle, spara al bersaglio drone, oscilla dai rami"
+    },
+    {
+      "id": 14,
+      "name": "Cryo Café Mocha",
+      "region": "Great Desert",
+      "location": "Apri il forziere e spara ai tre bersagli drone che appaiono"
+    },
+    {
+      "id": 15,
+      "name": "The Haven Earl Grey",
+      "region": "Great Desert",
+      "location": "In cima a un Hypertube, scala dall'ovest"
+    },
+    {
+      "id": 16,
+      "name": "The Haven Milk Tea",
+      "region": "Great Desert",
+      "location": "Completa il puzzle della piastra a pressione"
+    },
+    {
+      "id": 22,
+      "name": "Nectar Grape",
+      "region": "Great Desert",
+      "location": "Distributore automatico a sud dell'Oasi"
+    },
+    {
+      "id": 24,
+      "name": "Nectar Cranberry",
+      "region": "Great Desert",
+      "location": "Scala il sollevatore e salta sui robot di manutenzione"
+    },
+    {
+      "id": 29,
+      "name": "Behemoth Black",
+      "region": "Great Desert",
+      "location": "Risolvi il puzzle della piastra a pressione nel parcheggio"
+    },
+    {
+      "id": 30,
+      "name": "Liquid Fire",
+      "region": "Great Desert",
+      "location": "Interagisci con il forziere e distruggi tutti i droni"
+    },
+    {
+      "id": 32,
+      "name": "Liquid Nuclear",
+      "region": "Great Desert",
+      "location": "Scala l'impalcatura e sposta il carrello arancione grande"
+    },
+    {
+      "id": 35,
+      "name": "Potential Frost",
+      "region": "Great Desert",
+      "location": "Scala la scala e completa la sfida di platforming"
+    },
+    {
+      "id": 38,
+      "name": "Starwell",
+      "region": "Great Desert",
+      "location": "Posiziona una Smart Mine sull'oggetto brillante a terra"
+    },
+    {
+      "id": 40,
+      "name": "Mountain Sparkle Everest",
+      "region": "Great Desert",
+      "location": "Sposta il carrello arancione grande per bloccare i laser"
+    },
+    {
+      "id": 43,
+      "name": "Cryo the Malt",
+      "region": "Great Desert",
+      "location": "Spara al drone per raggiungere una console (sfida a tempo)"
+    },
+    {
+      "id": 48,
+      "name": "Johnson's Highball Lemon",
+      "region": "Great Desert",
+      "location": "Sposta il carrello arancione e scala le sporgenze"
+    },
+    {
+      "id": 49,
+      "name": "Johnson's Highball Ginger",
+      "region": "Great Desert",
+      "location": "Distributore automatico nel mezzo delle rovine della città"
+    },
+    {
+      "id": 7,
+      "name": "Milky Pop",
+      "region": "Spire 4",
+      "location": "Salta oltre la sporgenza ai tubi, alla fine della piattaforma"
+    },
+    {
+      "id": 23,
+      "name": "Nectar Apple",
+      "region": "Spire 4",
+      "location": "Nascosta dietro una delle panchine rotonde nella lobby principale della nave"
+    },
+    {
+      "id": 31,
+      "name": "Liquid Lightning",
+      "region": "Spire 4",
+      "location": "Dietro i container blu accanto al campo di rifornimento"
+    },
+    {
+      "id": 37,
+      "name": "Moonwell",
+      "region": "Spire 4",
+      "location": "Dopo aver sconfitto Machine Hive, salta nella sezione destra della nave. Se persa, pescabile all'Oasi dopo Burning Xion"
+    }
+  ]
+}
