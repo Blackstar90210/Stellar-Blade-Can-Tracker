@@ -3,60 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar Blade - Can Tracker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Stellar Blade Can Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="logo">Stellar Blade – Can Tracker</h1>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Stellar Blade Can Tracker</h1>
                 <div class="counter">
-                    <span id="collected-count">0</span> / 49 lattine raccolte
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <nav class="sidebar" id="sidebar">
-        <div class="sidebar-content">
-            <h3>Filtra per regione</h3>
-            <ul class="region-filters">
-                <li><button class="filter-btn active" data-region="all">Tutte</button></li>
-                <li><button class="filter-btn" data-region="Eidos 7">Eidos 7</button></li>
-                <li><button class="filter-btn" data-region="Xion">Xion</button></li>
-                <li><button class="filter-btn" data-region="Wasteland">Wasteland</button></li>
-                <li><button class="filter-btn" data-region="Matrix 11">Matrix 11</button></li>
-                <li><button class="filter-btn" data-region="Great Desert">Great Desert</button></li>
-                <li><button class="filter-btn" data-region="Spire 4">Spire 4</button></li>
-            </ul>
-        </div>
-    </nav>
-
-    <button class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <main class="main-content">
-        <div class="container">
-            <div class="current-filter">
-                <h2 id="filter-title">Tutte le lattine</h2>
-                <div class="filter-stats">
-                    <span id="visible-count">49</span> lattine visualizzate
+                    <span id="counter">0</span> / 49 lattine raccolte
                 </div>
             </div>
             
-            <div class="cans-grid" id="cans-grid">
-                <!-- Le card verranno generate dinamicamente -->
+            <nav class="filter-nav">
+                <h3>Filtra per regione</h3>
+                <ul class="filter-list">
+                    <li><button class="filter-btn active" data-region="All">Tutte</button></li>
+                    <li><button class="filter-btn" data-region="Eidos 7">Eidos 7</button></li>
+                    <li><button class="filter-btn" data-region="Xion">Xion</button></li>
+                    <li><button class="filter-btn" data-region="Wasteland">Wasteland</button></li>
+                    <li><button class="filter-btn" data-region="Matrix 11">Matrix 11</button></li>
+                    <li><button class="filter-btn" data-region="Great Desert">Great Desert</button></li>
+                    <li><button class="filter-btn" data-region="Spire 4">Spire 4</button></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="btn btn-export" id="exportBtn">Esporta Salvataggio</button>
+                <button class="btn btn-import" id="importBtn">Importa Salvataggio</button>
+                <input type="file" id="fileInput" accept=".json" style="display: none;">
             </div>
-        </div>
-    </main>
-
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Cards will be populated by JavaScript -->
+            </div>
+        </main>
+        
+        <!-- Toast Notifications -->
+        <div class="toast" id="toast"></div>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>

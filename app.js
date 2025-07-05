@@ -1,215 +1,284 @@
-// Array delle lattine con tutti i 49 record
-const cans = [
-  {"id":1, "name":"Cryo Original", "region":"Eidos 7", "collected":false},
-  {"id":25, "name":"Elixir Carrot", "region":"Eidos 7", "collected":false},
-  {"id":33, "name":"Potential Blast", "region":"Eidos 7", "collected":false},
-  {"id":3, "name":"Pixie", "region":"Xion", "collected":false},
-  {"id":9, "name":"The Machinetta Americano", "region":"Xion", "collected":false},
-  {"id":11, "name":"The Machinetta Caramel Macchiato", "region":"Xion", "collected":false},
-  {"id":19, "name":"GrainT Oolong", "region":"Xion", "collected":false},
-  {"id":27, "name":"Behemoth Red", "region":"Xion", "collected":false},
-  {"id":36, "name":"Dionysus C", "region":"Xion", "collected":false},
-  {"id":39, "name":"Mountain Sparkle Mont Blanc", "region":"Xion", "collected":false},
-  {"id":45, "name":"Bayern Weissbier Dunkel", "region":"Xion", "collected":false},
-  {"id":2, "name":"Cryo Zero", "region":"Wasteland", "collected":false},
-  {"id":4, "name":"Pixie Zero", "region":"Wasteland", "collected":false},
-  {"id":10, "name":"The Machinetta Cafe Latte", "region":"Wasteland", "collected":false},
-  {"id":12, "name":"Cryo Cafe Original", "region":"Wasteland", "collected":false},
-  {"id":17, "name":"The Haven Green Tea", "region":"Wasteland", "collected":false},
-  {"id":18, "name":"GrainT Barley", "region":"Wasteland", "collected":false},
-  {"id":20, "name":"GrainT Corn", "region":"Wasteland", "collected":false},
-  {"id":21, "name":"Nectar Orange", "region":"Wasteland", "collected":false},
-  {"id":26, "name":"Elixir Green", "region":"Wasteland", "collected":false},
-  {"id":28, "name":"Behemoth Green", "region":"Wasteland", "collected":false},
-  {"id":34, "name":"Potential Tempest", "region":"Wasteland", "collected":false},
-  {"id":41, "name":"Mountain Sparkle Halla", "region":"Wasteland", "collected":false},
-  {"id":42, "name":"Cryo the Clear", "region":"Wasteland", "collected":false},
-  {"id":44, "name":"Bayern Hefe Weissbier", "region":"Wasteland", "collected":false},
-  {"id":46, "name":"Corsair Lager", "region":"Wasteland", "collected":false},
-  {"id":5, "name":"Newfoundland Dry", "region":"Matrix 11", "collected":false},
-  {"id":13, "name":"Cryo Cafe Vanilla", "region":"Matrix 11", "collected":false},
-  {"id":47, "name":"Corsair Ale", "region":"Matrix 11", "collected":false},
-  {"id":6, "name":"Newfoundland Dry Zero", "region":"Great Desert", "collected":false},
-  {"id":8, "name":"Milky Pop Zero", "region":"Great Desert", "collected":false},
-  {"id":14, "name":"Cryo Cafe Mocha", "region":"Great Desert", "collected":false},
-  {"id":15, "name":"The Haven Earl Grey", "region":"Great Desert", "collected":false},
-  {"id":16, "name":"The Haven Milk Tea", "region":"Great Desert", "collected":false},
-  {"id":22, "name":"Nectar Grape", "region":"Great Desert", "collected":false},
-  {"id":24, "name":"Nectar Cranberry", "region":"Great Desert", "collected":false},
-  {"id":29, "name":"Behemoth Black", "region":"Great Desert", "collected":false},
-  {"id":30, "name":"Liquid Fire", "region":"Great Desert", "collected":false},
-  {"id":32, "name":"Liquid Nuclear", "region":"Great Desert", "collected":false},
-  {"id":35, "name":"Potential Frost", "region":"Great Desert", "collected":false},
-  {"id":38, "name":"Starwell", "region":"Great Desert", "collected":false},
-  {"id":40, "name":"Mountain Sparkle Everest", "region":"Great Desert", "collected":false},
-  {"id":43, "name":"Cryo the Malt", "region":"Great Desert", "collected":false},
-  {"id":48, "name":"Johnson's Highball Lemon", "region":"Great Desert", "collected":false},
-  {"id":49, "name":"Johnson's Highball Ginger", "region":"Great Desert", "collected":false},
-  {"id":7, "name":"Milky Pop", "region":"Spire 4", "collected":false},
-  {"id":23, "name":"Nectar Apple", "region":"Spire 4", "collected":false},
-  {"id":31, "name":"Liquid Lightning", "region":"Spire 4", "collected":false},
-  {"id":37, "name":"Moonwell", "region":"Spire 4", "collected":false}
+// Dataset: 49 collectible cans in Stellar Blade
+const cansData = [
+    {"id":1,"name":"Cryo Original","region":"Eidos 7"},
+    {"id":2,"name":"Cryo Zero","region":"Wasteland"},
+    {"id":3,"name":"Pixie","region":"Xion"},
+    {"id":4,"name":"Pixie Zero","region":"Wasteland"},
+    {"id":5,"name":"Newfoundland Dry","region":"Matrix 11"},
+    {"id":6,"name":"Newfoundland Dry Zero","region":"Great Desert"},
+    {"id":7,"name":"Milky Pop","region":"Spire 4"},
+    {"id":8,"name":"Milky Pop Zero","region":"Great Desert"},
+    {"id":9,"name":"The Machinetta Americano","region":"Xion"},
+    {"id":10,"name":"The Machinetta Cafe Latte","region":"Wasteland"},
+    {"id":11,"name":"The Machinetta Caramel Macchiato","region":"Xion"},
+    {"id":12,"name":"Cryo Cafe Original","region":"Wasteland"},
+    {"id":13,"name":"Cryo Cafe Vanilla","region":"Matrix 11"},
+    {"id":14,"name":"Cryo Cafe Mocha","region":"Great Desert"},
+    {"id":15,"name":"The Haven Earl Grey","region":"Great Desert"},
+    {"id":16,"name":"The Haven Milk Tea","region":"Great Desert"},
+    {"id":17,"name":"The Haven Green Tea","region":"Wasteland"},
+    {"id":18,"name":"GrainT Barley","region":"Wasteland"},
+    {"id":19,"name":"GrainT Oolong","region":"Xion"},
+    {"id":20,"name":"GrainT Corn","region":"Wasteland"},
+    {"id":21,"name":"Nectar Orange","region":"Wasteland"},
+    {"id":22,"name":"Nectar Grape","region":"Great Desert"},
+    {"id":23,"name":"Nectar Apple","region":"Spire 4"},
+    {"id":24,"name":"Nectar Cranberry","region":"Great Desert"},
+    {"id":25,"name":"Elixir Carrot","region":"Eidos 7"},
+    {"id":26,"name":"Elixir Green","region":"Wasteland"},
+    {"id":27,"name":"Behemoth Red","region":"Xion"},
+    {"id":28,"name":"Behemoth Green","region":"Wasteland"},
+    {"id":29,"name":"Behemoth Black","region":"Great Desert"},
+    {"id":30,"name":"Liquid Fire","region":"Great Desert"},
+    {"id":31,"name":"Liquid Lightning","region":"Spire 4"},
+    {"id":32,"name":"Liquid Nuclear","region":"Great Desert"},
+    {"id":33,"name":"Potential Blast","region":"Eidos 7"},
+    {"id":34,"name":"Potential Tempest","region":"Wasteland"},
+    {"id":35,"name":"Potential Frost","region":"Great Desert"},
+    {"id":36,"name":"Dionysus C","region":"Xion"},
+    {"id":37,"name":"Moonwell","region":"Spire 4"},
+    {"id":38,"name":"Starwell","region":"Great Desert"},
+    {"id":39,"name":"Mountain Sparkle Mont Blanc","region":"Xion"},
+    {"id":40,"name":"Mountain Sparkle Everest","region":"Great Desert"},
+    {"id":41,"name":"Mountain Sparkle Halla","region":"Wasteland"},
+    {"id":42,"name":"Cryo the Clear","region":"Wasteland"},
+    {"id":43,"name":"Cryo the Malt","region":"Great Desert"},
+    {"id":44,"name":"Bayern Hefe Weissbier","region":"Wasteland"},
+    {"id":45,"name":"Bayern Weissbier Dunkel","region":"Xion"},
+    {"id":46,"name":"Corsair Lager","region":"Wasteland"},
+    {"id":47,"name":"Corsair Ale","region":"Matrix 11"},
+    {"id":48,"name":"Johnson's Highball Lemon","region":"Great Desert"},
+    {"id":49,"name":"Johnson's Highball Ginger","region":"Great Desert"}
 ];
 
-// Stato dell'applicazione
-let currentFilter = 'all';
-let filteredCans = [...cans];
+// Global state management
+let currentSave = {
+    collected: new Set() // Use Set for efficient lookup and storage
+};
 
-// Elementi DOM
-const cansGrid = document.getElementById('cans-grid');
-const collectedCount = document.getElementById('collected-count');
-const visibleCount = document.getElementById('visible-count');
-const filterTitle = document.getElementById('filter-title');
+let currentFilter = 'All'; // Current active filter
+
+// DOM elements
+const cardsGrid = document.getElementById('cardsGrid');
+const counter = document.getElementById('counter');
 const filterButtons = document.querySelectorAll('.filter-btn');
-const menuToggle = document.getElementById('menu-toggle');
-const sidebar = document.getElementById('sidebar');
+const exportBtn = document.getElementById('exportBtn');
+const importBtn = document.getElementById('importBtn');
+const fileInput = document.getElementById('fileInput');
+const toast = document.getElementById('toast');
 
-// Funzione per renderizzare le card delle lattine
-function renderCans(cansToRender = filteredCans) {
-  cansGrid.innerHTML = '';
-  
-  cansToRender.forEach(can => {
-    const cardElement = document.createElement('div');
-    cardElement.className = `can-card ${can.collected ? 'collected' : ''}`;
-    cardElement.innerHTML = `
-      <div class="can-name">${can.name}</div>
-      <div class="can-region">${can.region}</div>
-      <div class="can-checkbox">
-        <input type="checkbox" id="can-${can.id}" ${can.collected ? 'checked' : ''}>
-        <label for="can-${can.id}">Raccolta</label>
-      </div>
+// Initialize the application
+function init() {
+    setupEventListeners();
+    renderCards();
+    updateCounter();
+}
+
+// Set up all event listeners
+function setupEventListeners() {
+    // Filter buttons
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', handleFilterChange);
+    });
+    
+    // Export/Import buttons
+    exportBtn.addEventListener('click', exportSave);
+    importBtn.addEventListener('click', triggerFileInput);
+    fileInput.addEventListener('change', importSave);
+}
+
+// Handle filter changes
+function handleFilterChange(e) {
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to clicked button
+    e.target.classList.add('active');
+    
+    // Update current filter
+    currentFilter = e.target.dataset.region;
+    
+    // Re-render cards with new filter
+    renderCards();
+}
+
+// Render cards based on current filter
+function renderCards() {
+    const filteredCans = currentFilter === 'All' 
+        ? cansData 
+        : cansData.filter(can => can.region === currentFilter);
+    
+    cardsGrid.innerHTML = '';
+    
+    filteredCans.forEach(can => {
+        const card = createCard(can);
+        cardsGrid.appendChild(card);
+    });
+}
+
+// Create individual card element
+function createCard(can) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.canId = can.id;
+    
+    // Check if can is collected
+    const isCollected = currentSave.collected.has(can.id);
+    if (isCollected) {
+        card.classList.add('collected');
+    }
+    
+    card.innerHTML = `
+        <h3>${can.name}</h3>
+        <div class="region">${can.region}</div>
+        <div class="checkbox-container">
+            <input 
+                type="checkbox" 
+                id="can-${can.id}"
+                ${isCollected ? 'checked' : ''}
+                aria-label="Checkbox raccolta ${can.name}"
+            >
+            <label for="can-${can.id}">Raccolta</label>
+        </div>
     `;
     
-    // Aggiungere event listener al checkbox
-    const checkbox = cardElement.querySelector(`#can-${can.id}`);
-    checkbox.addEventListener('change', (e) => handleCheckboxChange(can.id, e.target.checked));
+    // Add event listener to checkbox
+    const checkbox = card.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', (e) => handleCheckboxChange(e, can.id));
     
-    cansGrid.appendChild(cardElement);
-  });
-  
-  updateCounters();
+    return card;
 }
 
-// Funzione per gestire il cambio di stato del checkbox
-function handleCheckboxChange(canId, isChecked) {
-  const canIndex = cans.findIndex(can => can.id === canId);
-  if (canIndex !== -1) {
-    cans[canIndex].collected = isChecked;
+// Handle checkbox state changes
+function handleCheckboxChange(e, canId) {
+    const isChecked = e.target.checked;
+    const card = e.target.closest('.card');
     
-    // Aggiornare la card visivamente
-    const cardElement = document.querySelector(`#can-${canId}`).closest('.can-card');
     if (isChecked) {
-      cardElement.classList.add('collected');
+        // Add to collected set
+        currentSave.collected.add(canId);
+        card.classList.add('collected');
     } else {
-      cardElement.classList.remove('collected');
+        // Remove from collected set
+        currentSave.collected.delete(canId);
+        card.classList.remove('collected');
     }
     
-    updateCounters();
-  }
+    // Update counter
+    updateCounter();
+    
+    // Auto-save (in-memory only, as per requirements)
+    console.log('Auto-saved:', currentSave);
 }
 
-// Funzione per aggiornare i contatori
-function updateCounters() {
-  const totalCollected = cans.filter(can => can.collected).length;
-  const visibleCans = filteredCans.length;
-  
-  collectedCount.textContent = totalCollected;
-  visibleCount.textContent = visibleCans;
+// Update the counter display
+function updateCounter() {
+    const collectedCount = currentSave.collected.size;
+    counter.textContent = collectedCount;
 }
 
-// Funzione per filtrare le lattine per regione
-function filterCansByRegion(region) {
-  currentFilter = region;
-  
-  if (region === 'all') {
-    filteredCans = [...cans];
-    filterTitle.textContent = 'Tutte le lattine';
-  } else {
-    filteredCans = cans.filter(can => can.region === region);
-    filterTitle.textContent = `Lattine - ${region}`;
-  }
-  
-  renderCans(filteredCans);
+// Trigger file input for import
+function triggerFileInput(e) {
+    e.preventDefault();
+    fileInput.click();
 }
 
-// Funzione per gestire il toggle del menu mobile
-function toggleMenu() {
-  sidebar.classList.toggle('open');
-  menuToggle.classList.toggle('active');
-}
-
-// Event listeners
-document.addEventListener('DOMContentLoaded', function() {
-  // Renderizzare inizialmente tutte le lattine
-  renderCans();
-  
-  // Event listeners per i filtri
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const region = this.dataset.region;
-      
-      // Aggiornare stato attivo del pulsante
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      this.classList.add('active');
-      
-      // Filtrare le lattine
-      filterCansByRegion(region);
-      
-      // Chiudere il menu su mobile dopo la selezione
-      if (window.innerWidth < 1024) {
-        sidebar.classList.remove('open');
-        menuToggle.classList.remove('active');
-      }
-    });
-  });
-  
-  // Event listener per il toggle del menu
-  menuToggle.addEventListener('click', toggleMenu);
-  
-  // Chiudere il menu quando si clicca fuori su mobile
-  document.addEventListener('click', function(e) {
-    if (window.innerWidth < 1024 && 
-        !sidebar.contains(e.target) && 
-        !menuToggle.contains(e.target) && 
-        sidebar.classList.contains('open')) {
-      sidebar.classList.remove('open');
-      menuToggle.classList.remove('active');
+// Export save data as JSON
+function exportSave(e) {
+    e.preventDefault();
+    
+    try {
+        const saveData = {
+            collected: Array.from(currentSave.collected) // Convert Set to Array for JSON
+        };
+        
+        const jsonString = JSON.stringify(saveData, null, 2);
+        const blob = new Blob([jsonString], {
+            type: 'application/json'
+        });
+        
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'stellar-blade-cans-save.json';
+        a.style.display = 'none';
+        
+        // Trigger download
+        document.body.appendChild(a);
+        a.click();
+        
+        // Clean up
+        setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 100);
+        
+        // Show success toast
+        showToast('Salvataggio esportato con successo!', 'success');
+        
+    } catch (error) {
+        console.error('Error exporting save:', error);
+        showToast('Errore durante l\'esportazione: ' + error.message, 'error');
     }
-  });
-  
-  // Gestire il ridimensionamento della finestra
-  window.addEventListener('resize', function() {
-    if (window.innerWidth >= 1024) {
-      sidebar.classList.remove('open');
-      menuToggle.classList.remove('active');
-    }
-  });
-});
-
-// Funzioni di utilità per debugging (opzionali)
-function resetAllCans() {
-  cans.forEach(can => can.collected = false);
-  renderCans();
 }
 
-function collectAllCans() {
-  cans.forEach(can => can.collected = true);
-  renderCans();
-}
-
-function getCollectionStats() {
-  const stats = {};
-  const regions = [...new Set(cans.map(can => can.region))];
-  
-  regions.forEach(region => {
-    const regionCans = cans.filter(can => can.region === region);
-    const collected = regionCans.filter(can => can.collected).length;
-    stats[region] = {
-      total: regionCans.length,
-      collected: collected,
-      percentage: Math.round((collected / regionCans.length) * 100)
+// Import save data from JSON file
+function importSave(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        try {
+            const saveData = JSON.parse(event.target.result);
+            
+            // Validate save data structure
+            if (!saveData || !Array.isArray(saveData.collected)) {
+                throw new Error('Formato file non valido');
+            }
+            
+            // Validate that all IDs are valid
+            const validIds = saveData.collected.filter(id => 
+                cansData.some(can => can.id === id)
+            );
+            
+            // Update current save
+            currentSave.collected = new Set(validIds);
+            
+            // Re-render cards to reflect loaded state
+            renderCards();
+            updateCounter();
+            
+            // Show success toast
+            showToast('Salvataggio caricato con successo!', 'success');
+            
+        } catch (error) {
+            console.error('Error importing save:', error);
+            showToast('Errore nel caricamento del file: ' + error.message, 'error');
+        }
     };
-  });
-  
-  return stats;
+    
+    reader.onerror = function() {
+        showToast('Errore nella lettura del file', 'error');
+    };
+    
+    reader.readAsText(file);
+    
+    // Clear file input for future imports
+    fileInput.value = '';
 }
+
+// Show toast notification
+function showToast(message, type = 'success') {
+    toast.textContent = message;
+    toast.className = `toast ${type}`;
+    toast.classList.add('show');
+    
+    // Hide toast after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
+
+// Initialize the app when DOM is loaded
+document.addEventListener('DOMContentLoaded', init);
